@@ -131,12 +131,14 @@
 
         /* Right Content Pane */
         .content-container {
-            width: 66.66%;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    margin-left: 33.33%;
+    width: 66.66%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* change from center to start */
+}
+
 
         /* Tabs Container */
         .tabs-container {
@@ -436,6 +438,9 @@
                 width: 100%;
                 /* full width */
                 padding: 20px;
+
+            .tabs-container {
+                width: 100%;
             }
         }
     </style>
@@ -653,3 +658,4 @@
 
 
 </html>
+
