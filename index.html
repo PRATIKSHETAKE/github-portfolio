@@ -31,41 +31,38 @@
             color: var(--text);
         }
 
+
         /* Layout */
         .container {
             display: flex;
-            height: 100vh;
-            /* ensures full screen height */
+            /* push down to avoid navbar overlap */
         }
 
-        /* Left Profile Pane */
-        /* Profile Container Full Height */
+        /* Profile Container Left */
         .profile-container {
             position: fixed;
+            /* below navbar */
             left: 0;
-            top: 0;
-            bottom: 0;
-            /* make sure it sticks till bottom */
             width: 33.33%;
             height: 100vh;
-            /* full viewport height */
-            background: #111;
-            color: var(--text);
+            background-color: #0a0a0a;
+            color: #fff;
+            padding: 40px 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            /* keep everything aligned top by default */
-            padding: 20px;
-            box-sizing: border-box;
+            text-align: center;
+            overflow-y: auto;
         }
 
+        /* Content Right */
         .content-container {
-            margin-left: 33.33%;
+            margin-left: 30%;
             width: 66.66%;
-            padding: 50px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         /* Profile Card */
@@ -78,17 +75,17 @@
             text-align: center;
         }
 
-        /* Profile Image */
         .profile img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            border-radius: 15%;
             border: 4px solid var(--primary);
-            margin-bottom: 15px;
+            margin-top: 40px;
+            margin-bottom: 50px;
         }
 
-        /* Headings & Text */
         .profile h2 {
+            font-size: 2.5rem;
             margin-bottom: 5px;
             font-weight: 700;
         }
@@ -100,22 +97,22 @@
             font-size: 0.95rem;
         }
 
-        /* Contact Info */
         .profile .info p {
             text-align: left;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-size: 1rem;
             color: var(--secondary);
         }
 
         .profile .info i {
+            font-size: 1.1rem;
             margin-right: 10px;
             color: var(--primary);
+
         }
 
-        /* Social Media Icons */
         .social-media {
-            margin-top: 15px;
+            margin-top: auto;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -129,27 +126,16 @@
             transform: translateY(-5px) scale(1.1);
         }
 
-        /* Right Content Pane */
-        .content-container {
-    margin-left: 33.33%;
-    width: 66.66%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* change from center to start */
-}
-
-
-        /* Tabs Container */
+        /* Tabs */
         .tabs-container {
-    display: flex;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;        /* use full width of content container */
-    margin-bottom: 30px;
-    background: #111;
-    justify-content: flex-start; /* align tabs to left */
-}
+            display: flex;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 30px;
+            background: #111;
+        }
 
         .tabs-container button {
             flex: 1;
@@ -175,11 +161,6 @@
             border-radius: 2px;
         }
 
-        .tabs-container button:hover:not(.active) {
-            background: #1a1a1a;
-        }
-
-        /* Tab Content */
         .tab-content {
             width: 100%;
             max-width: 900px;
@@ -193,7 +174,6 @@
             display: block;
         }
 
-        /* Section Headings */
         section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
@@ -239,19 +219,15 @@
         }
 
         .project-card h3 {
+            font-size: 1.4rem;
             color: var(--primary);
             margin-bottom: 10px;
         }
 
-        .project-card p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        /* Tech tags */
         .project-tech {
             display: flex;
             flex-wrap: wrap;
+            margin-top: 20px;
             gap: 8px;
         }
 
@@ -260,187 +236,134 @@
             color: var(--secondary);
             border: 1px solid var(--primary);
             padding: 4px 10px;
+            margin: 5px;
+            padding: 12px;
             border-radius: 15px;
             font-size: 0.85em;
         }
 
         /* Resume */
-        .resume p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            font-weight: 500;
-            color: var(--secondary);
-        }
-
-        /* Resume Sections */
-        .resume-section {
+        .resume-section,
+        .education-item,
+        .cert-item {
             background: #111;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
-        .resume-section p {
-            margin: 8px 0;
-            font-weight: 500;
-        }
-
-        /* Education Section */
-        /* Education Section */
-        .education-item {
-            background: #111;
-            padding: 20px;
             border-radius: 15px;
             margin-bottom: 15px;
-            color: var(--secondary);
+            padding: 15px 20px;
         }
 
-        /* Each row has left and right aligned items */
         .education-item .row {
             display: flex;
             justify-content: space-between;
-            width: 100%;
-            margin-bottom: 5px;
         }
 
-        /* Top row: college name and year */
-        .college-name {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
+        .college-name,
         .year {
             font-weight: 600;
             color: var(--primary);
         }
 
-        /* Bottom row: course and score */
-        .course {
-            font-weight: 500;
-            color: var(--secondary);
-        }
-
+        .course,
         .score {
-            font-weight: 500;
             color: var(--secondary);
         }
 
-
-
-        /* Certifications Section */
         .cert-item {
             display: flex;
             justify-content: space-between;
-            background: #111;
-            padding: 15px 20px;
-            border-radius: 15px;
-            margin-bottom: 12px;
-            color: var(--secondary);
-        }
-
-        .cert-name {
-            font-weight: 500;
-            color: var(--secondary);
+            align-items: center;
         }
 
         .cert-provider {
+            color: white;
             font-weight: 600;
-            color: var(--primary);
         }
 
         .resume-box {
             background: #1a1a1a;
-            /* faded black */
             padding: 20px;
             border-radius: 10px;
             margin-top: 15px;
         }
 
-        /* Items inside the box */
         .extra-item {
             color: var(--secondary);
             padding: 15px 0;
             border-bottom: 1px solid #333;
-            /* subtle divider */
         }
 
         .extra-item:last-child {
             border-bottom: none;
-            /* remove line from last item */
         }
 
-        /* Training Box */
         .training-box {
             border-left: 4px solid var(--primary);
-            /* amber accent bar */
             padding-left: 15px;
             margin-bottom: 30px;
-        }
-
-        /* Header */
-        .training-header {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 12px;
+            /* Add the following lines to match the project card style */
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--primary);
         }
 
         .training-name {
+            font-size: 1.4rem;
             font-weight: bold;
             color: var(--primary);
-            font-size: 1.2em;
+            margin-bottom: 15px;
         }
 
         .training-role {
-            color: var(--secondary);
-            font-size: 1em;
-            margin-top: 4px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            color: #fff;
+            /* Add bottom margin to the role text */
         }
 
-        /* Course tags */
         .training-course {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 20px;
+            /* Add top margin to separate it from the role text */
         }
 
         .tag {
             background: #222;
             color: var(--secondary);
             border: 1px solid var(--primary);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
+            padding: 4px 4px;
+            margin: 5px;
+            padding: 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
         }
 
-
-
-
+        footer {
+            margin-top: 40px;
+            color: var(--secondary);
+            font-size: 0.85rem;
+        }
 
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                margin-top: 110px;
+                /* push below navbar */
             }
 
             .profile-container {
                 position: relative;
-                /* remove fixed */
                 width: 100%;
-                /* full width */
                 height: auto;
-                /* adjust height */
-                padding: 20px;
+                top: 0;
+                margin-bottom: 20px;
             }
 
             .content-container {
                 margin-left: 0;
-                /* no offset */
                 width: 100%;
-                /* full width */
                 padding: 20px;
-
-            .tabs-container {
-                width: 100%;
             }
         }
     </style>
@@ -448,56 +371,51 @@
 
 <body>
 
+
     <div class="container">
-        <!-- Left Profile -->
+        <!-- Profile -->
         <div class="profile-container">
             <div class="profile">
                 <img src="profile.jpg" alt="Pratik Shetake">
                 <h2>Pratik Shetake</h2>
-                <p>Data Analyst | ML & AI Enthusiast | Big Data Analyst</p>
-
-                <!-- Contact Info -->
+                <p style="margin-bottom: 50px;">Data Analyst | ML & AI Enthusiast | Big Data Analyst</p>
                 <div class="info">
-                    <p><i class="fas fa-map-marker-alt"></i> Kolhapur, India</p>
-                    <p><i class="fas fa-envelope"></i>work.pratikshetake@gmail.com</p>
-                    <p><i class="fas fa-phone"></i>+91 70300 32928</p>
+                    <p><i class="fas fa-map-marker-alt" style="padding-left: 3px;"></i>Kolhapur, Maharashtra, India</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:work.pratikshetake@gmail.com"
+                            style="color: inherit; text-decoration: none;">work.pratikshetake@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+917030032928"
+                            style="color: inherit; text-decoration: none;">+91 70300 32928</a></p>
                 </div>
-
-                <!-- Reach/Connect Me At with tooltips -->
-                <h3 style="margin-top:25px; text-align:center; font-weight:600; color:var(--primary);">Reach/Connect Me
-                    At</h3>
+                <h3 style="margin:25px 0;margin-top: 50px; color:var(--primary);">Reach/Connect Me At</h3>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/pratikshetake" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin fa-2x" style="color:var(--primary);"></i>
-                    </a>
-                    <a href="https://leetcode.com/u/user9950Ge/" target="_blank" title="LeetCode">
-                        <i class="fas fa-code fa-2x" style="color:#FFA116;"></i>
+                        <i class="fab fa-linkedin fa-2x" style="color: var(--primary);"></i>
                     </a>
                     <a href="https://learn.microsoft.com/en-us/users/pratikshetake-8962/" target="_blank"
                         title="Microsoft Learn">
                         <i class="fas fa-graduation-cap fa-2x" style="color:#0078D4;"></i>
                     </a>
+                    <a href="https://leetcode.com/u/user9950Ge/" target="_blank" title="LeetCode">
+                        <i class="fas fa-code fa-2x" style="color:#FFA116;"></i>
+                    </a>
                     <a href="https://www.hackerrank.com/profile/pratikshetake_37" target="_blank" title="HackerRank">
                         <i class="fab fa-hackerrank fa-2x" style="color:#2EC866;"></i>
                     </a>
                     <a href="https://github.com/PRATIKSHETAKE" target="_blank" title="GitHub">
-                        <i class="fab fa-github fa-2x" style="color:var(--primary);"></i>
+                        <i class="fab fa-github fa-2x" style="color:white"></i>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Right Content -->
+        <!-- Content -->
         <div class="content-container">
-            <!-- Tabs -->
             <div class="tabs-container">
                 <button class="tab-button active" data-tab="home">Home</button>
                 <button class="tab-button" data-tab="resume">Resume</button>
             </div>
 
-            <!-- Tab Content -->
             <div class="tab-content">
-                <!-- Home -->
                 <section id="home" class="active">
                     <h2>Skills</h2>
                     <div class="skills">
@@ -506,22 +424,21 @@
                         <div class="skill">C</div>
                         <div class="skill">Flutter</div>
                         <div class="skill">React Native</div>
-                        <div class="skill">My SQL</div>
+                        <div class="skill">MySQL</div>
                         <div class="skill">Machine Learning</div>
                         <div class="skill">Deep Learning</div>
                         <div class="skill">Spark</div>
                         <div class="skill">Hadoop</div>
                         <div class="skill">Scala</div>
                         <div class="skill">NiFi</div>
-                        <div class="skill">Cassendra</div>
+                        <div class="skill">Cassandra</div>
                         <div class="skill">Kafka</div>
                         <div class="skill">Hive</div>
                         <div class="skill">HBase</div>
                         <div class="skill">OOP's</div>
                     </div>
 
-                    <h2>Projects</h2>
-
+                    <h2 style="margin-top: 40px;">Projects</h2>
                     <div class="project-card">
                         <h3>Self-Driving Car Simulation</h3>
                         <p>Simulated traffic, traffic lights, and pedestrians in Unity to model a self-driving car
@@ -547,14 +464,11 @@
                         </div>
                     </div>
 
-
-                    <h2>Professional Training</h2>
+                    <h2 style="margin-top: 40px;">Professional Training</h2>
                     <div class="resume-box training-box">
                         <div class="training-item">
-                            <div class="training-header">
-                                <span class="training-name">Fortune Cloud Technologies</span>
-                                <span class="training-role">Data Analytics & Data Science</span>
-                            </div>
+                            <span class="training-name">Fortune Cloud Technologies</span>
+                            <p class="training-role">Data Analytics & Data Science</p>
                             <div class="training-course">
                                 <span class="tag">Advanced Excel</span>
                                 <span class="tag">Power BI</span>
@@ -568,7 +482,6 @@
                     </div>
                 </section>
 
-                <!-- Resume -->
                 <section id="resume">
                     <h2>Education</h2>
                     <div class="resume-section">
@@ -578,7 +491,7 @@
                                 <p class="year">2025</p>
                             </div>
                             <div class="row">
-                                <p class="course">B.Tech CSE(Data Science)</p>
+                                <p class="course">B.Tech CSE (Data Science)</p>
                                 <p class="score">CGPA: 6.88</p>
                             </div>
                         </div>
@@ -589,13 +502,11 @@
                                 <p class="year">2021</p>
                             </div>
                             <div class="row">
-                                <p class="course">Intermiediate</p>
+                                <p class="course">Intermediate</p>
                                 <p class="score">Percentage: 95%</p>
                             </div>
                         </div>
                     </div>
-
-
 
                     <h2>Certifications</h2>
                     <div class="resume-section">
@@ -604,32 +515,26 @@
                             <p class="cert-provider">Coursera</p>
                         </div>
                         <div class="cert-item">
-                            <p class="cert-name">Master Big Data</p>
-                            <p class="cert-provider">Coursera</p>
+                            <p class="cert-name">Mastering Big Data: Spark, Scala, Kafka, Hadoop,Hive & More</p>
+                            <p class="cert-provider">Udemy</p>
                         </div>
                     </div>
-
 
                     <h2>Extra Curricular</h2>
                     <div class="resume-box">
-                        <div class="extra-item">
-                            Alumni Representative for 2019 Batch
-                        </div>
-                        <div class="extra-item">
-                            Design Head ACADS [2022-2024]
-                        </div>
+                        <div class="extra-item">Alumni Representative for 2019 Batch</div>
+                        <div class="extra-item">Design Head ACADS [2022-2024]</div>
                     </div>
-
 
                     <h2>Hobbies</h2>
                     <div class="skills">
                         <div class="skill">Travelling</div>
                         <div class="skill">Bike Ride</div>
+                        <div class="skill">Football</div>
                         <div class="skill">Music</div>
-                        <div style="padding-block-end: 30px;" class="skill">Gaming</div>
+                        <div class="skill">Gaming</div>
                     </div>
                 </section>
-
             </div>
 
             <footer>
@@ -653,9 +558,6 @@
             });
         });
     </script>
-
 </body>
 
-
 </html>
-
