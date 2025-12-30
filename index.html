@@ -208,6 +208,13 @@
             border: 2px solid var(--primary);
         }
 
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
         /* Projects */
         .project-card {
             background: #111;
@@ -215,7 +222,8 @@
             padding: 20px;
             border-radius: 12px;
             border: 2px solid var(--primary);
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card h3 {
@@ -224,11 +232,17 @@
             margin-bottom: 10px;
         }
 
+        .project-card p {
+            flex-grow: 1; /* Pushes the tech tags to the bottom */
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
-            margin-top: 20px;
             gap: 8px;
+            margin-top: auto; /* Aligns to bottom */
         }
 
         .project-tech .tag {
@@ -236,7 +250,7 @@
             color: var(--secondary);
             border: 1px solid var(--primary);
             padding: 4px 10px;
-            margin: 5px;
+            margin: 0; /* Adjusted margin */
             padding: 8px 12px;
             border-radius: 15px;
             font-size: 0.85em;
@@ -476,50 +490,60 @@
                     </div>
 
                     <h2 style="margin-top: 40px;">Projects</h2>
-                    
-                    <div class="project-card">
-                        <h3>Credit Card Classification using Deep Learning</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Credit-Card-Classification-using-DL/tree/main"
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-                        <p style="margin-top: 10px;">Built a deep learning classification model to predict credit card customer behavior using historical financial data.</p>
-                        <div class="project-tech">
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NumPy</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">EDA</span>
+                    <div class="projects-grid">
+                        
+                        <div class="project-card">
+                            <h3>Credit Card Classification</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Credit-Card-Classification-using-DL/tree/main"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
+                            <p>Built a deep learning classification model to predict credit card customer behavior using historical financial data.</p>
+                            <div class="project-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Seaborn</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="project-card">
-                        <h3>Semantic Segmentation & Object Detection</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection"
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-
-                        <p style="margin-top: 10px;">Simulated traffic, traffic lights, and pedestrians to model a self-driving car environment using U-Net and YOLOv3.</p>
-                        <div class="project-tech">
-                            <span class="tag">Python</span>
-                            <span class="tag">SciKit Learn</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">YOLOv3 (97% Acc)</span>
-                            <span class="tag">U-Net (91% Acc)</span>
-                            <span class="tag">CityScape 25K</span>
+                        <div class="project-card">
+                            <h3>Global Earthquakes & Tsunami Analysis</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Global-Earthquakes-and-Tsunami-analysis"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
+                            <p>Analyzed global earthquake data to identify seismic patterns, magnitudes, and their relation to tsunami occurrences using Geospatial visualizations.</p>
+                            <div class="project-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">Plotly</span>
+                                <span class="tag">GeoPandas</span>
+                                <span class="tag">EDA</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="project-card">
-                        <h3>Image Captioning Model</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Image-Captioning"
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-                        <p style="margin-top: 10px;">Developed an image captioning system using CNN + LSTM architecture trained on the COCO dataset.</p>
-                        <div class="project-tech">
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">COCO Dataset</span>
-                            <span class="tag">CNN-RNN</span>
-                            <span class="tag">96% Accuracy</span>
+                        <div class="project-card">
+                            <h3>Self Driving Car Perception</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
+
+                            <p>Simulated a self-driving car environment using U-Net for road segmentation and YOLOv3 for real-time object detection.</p>
+                            <div class="project-tech">
+                                <span class="tag">YOLOv3</span>
+                                <span class="tag">U-Net</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">CV</span>
+                            </div>
                         </div>
+
+                        <div class="project-card">
+                            <h3>Image Captioning Model</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Image-Captioning"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
+                            <p>Developed an image captioning system using CNN + LSTM architecture trained on the COCO dataset to describe images in natural language.</p>
+                            <div class="project-tech">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">CNN-RNN</span>
+                                <span class="tag">COCO</span>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
