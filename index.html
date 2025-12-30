@@ -57,7 +57,7 @@
 
         /* Content Right */
         .content-container {
-            margin-left: 30%;
+            margin-left: 33.33%;
             width: 66.66%;
             padding: 40px;
             display: flex;
@@ -201,7 +201,7 @@
         .skill {
             background: #111;
             color: var(--secondary);
-            padding: 25px;
+            padding: 15px 25px;
             border-radius: 15px;
             text-align: center;
             font-weight: 500;
@@ -237,7 +237,7 @@
             border: 1px solid var(--primary);
             padding: 4px 10px;
             margin: 5px;
-            padding: 12px;
+            padding: 8px 12px;
             border-radius: 15px;
             font-size: 0.85em;
         }
@@ -300,7 +300,6 @@
             border-left: 4px solid var(--primary);
             padding-left: 15px;
             margin-bottom: 30px;
-            /* Add the following lines to match the project card style */
             padding: 20px;
             border-radius: 12px;
             border: 2px solid var(--primary);
@@ -310,14 +309,23 @@
             font-size: 1.4rem;
             font-weight: bold;
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+            display: block;
         }
 
         .training-role {
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             margin-top: 5px;
             color: #fff;
-            /* Add bottom margin to the role text */
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .training-date {
+            color: #bbb;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
         }
 
         .training-course {
@@ -325,7 +333,6 @@
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 20px;
-            /* Add top margin to separate it from the role text */
         }
 
         .tag {
@@ -334,7 +341,7 @@
             border: 1px solid var(--primary);
             padding: 4px 4px;
             margin: 5px;
-            padding: 12px;
+            padding: 8px 12px;
             border-radius: 15px;
             font-size: 0.85em;
         }
@@ -372,7 +379,6 @@
 
 
     <div class="container">
-        <!-- Profile -->
         <div class="profile-container">
             <div class="profile">
                 <img src="profile.jpg" alt="Pratik Shetake">
@@ -407,7 +413,6 @@
             </div>
         </div>
 
-        <!-- Content -->
         <div class="content-container">
             <div class="tabs-container">
                 <button class="tab-button active" data-tab="home">Home</button>
@@ -449,63 +454,15 @@
                         <div class="skill">OOP's</div>
                     </div>
 
-                    <h2 style="margin-top: 40px;">Projects</h2>
-                    <div class="project-card">
-                        <h3>Earthquake and Tsunami Risk Analysis</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Global-Earthquakes-and-Tsunami-analysis" 
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-                        <p>Simulated traffic, traffic lights, and pedestrians in Unity to model a self-driving car
-                            environment.</p>
-                        <div class="project-tech">
-                            <span class="tag">Python</span>
-                            <span class="tag">Matplotlib</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Numpy</span>
-                            <span class="tag">Seaborn</span>
-                            <span class="tag">Visulization</span>
-                            <span class="tag">Observations</span>
-                            <span class="tag">EDA</span>
-                            <span class="tag">ETL</span>
-                            
-                        </div>
-                    </div>
-
-                    
-                    <div class="project-card">
-                        <h3>Semantic Segmentation using U-Net with extension for Object Detection using YOLOv3</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection" 
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-                        
-                        <p>Simulated traffic, traffic lights, and pedestrians in Unity to model a self-driving car
-                            environment.</p>
-                        <div class="project-tech">
-                            <span class="tag">Python</span>
-                            <span class="tag">SciKit Learn</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">97% Accuracy for YOLOv3</span>
-                            <span class="tag">91% Accuracy For Semantic Segmentation</span>
-                            <span class="tag">CityScape 25K Dataset</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Image Captioning Model</h3>
-                        <a href="https://github.com/PRATIKSHETAKE/Image-Captioning" 
-                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
-                        <p>Developed an image captioning system using CNN + LSTM on the COCO dataset.</p>
-                        <div class="project-tech">
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">COCO Dataset</span>
-                            <span class="tag">96% Accuracy</span>
-                        </div>
-                    </div>
-
                     <h2 style="margin-top: 40px;">Professional Training</h2>
                     <div class="resume-box training-box">
                         <div class="training-item">
                             <span class="training-name">Fortune Cloud Technologies</span>
-                            <p class="training-role">Data Analytics & Data Science</p>
+                            <p class="training-role">Trainee, Data Analytics and Science Engineer</p>
+                            <p class="training-date">June 2025 - Jan 2026</p>
+                            <p style="color: #ddd; line-height: 1.4;">
+                                <strong>Key Projects:</strong> Credit Card Classification, Tsunami Risk Assessment, Coffee Shop Sales Analysis.
+                            </p>
                             <div class="training-course">
                                 <span class="tag">Advanced Excel</span>
                                 <span class="tag">Power BI</span>
@@ -515,6 +472,53 @@
                                 <span class="tag">Machine Learning</span>
                                 <span class="tag">Deep Learning</span>
                             </div>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-top: 40px;">Projects</h2>
+                    
+                    <div class="project-card">
+                        <h3>Credit Card Classification using Deep Learning</h3>
+                        <a href="https://github.com/PRATIKSHETAKE/Credit-Card-Classification-using-DL/tree/main"
+                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
+                        <p style="margin-top: 10px;">Built a deep learning classification model to predict credit card customer behavior using historical financial data.</p>
+                        <div class="project-tech">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">EDA</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Semantic Segmentation & Object Detection</h3>
+                        <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection"
+                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
+
+                        <p style="margin-top: 10px;">Simulated traffic, traffic lights, and pedestrians to model a self-driving car environment using U-Net and YOLOv3.</p>
+                        <div class="project-tech">
+                            <span class="tag">Python</span>
+                            <span class="tag">SciKit Learn</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">YOLOv3 (97% Acc)</span>
+                            <span class="tag">U-Net (91% Acc)</span>
+                            <span class="tag">CityScape 25K</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Image Captioning Model</h3>
+                        <a href="https://github.com/PRATIKSHETAKE/Image-Captioning"
+                            style="color: var(--primary); text-decoration: underline;">Link to Repo</a>
+                        <p style="margin-top: 10px;">Developed an image captioning system using CNN + LSTM architecture trained on the COCO dataset.</p>
+                        <div class="project-tech">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">COCO Dataset</span>
+                            <span class="tag">CNN-RNN</span>
+                            <span class="tag">96% Accuracy</span>
                         </div>
                     </div>
                 </section>
@@ -529,7 +533,7 @@
                             </div>
                             <div class="row">
                                 <p class="course">B.Tech CSE (Data Science)</p>
-                                <p class="score">CGPA: 6.88</p>
+                                <p class="score">CGPA: 6.9</p>
                             </div>
                         </div>
 
@@ -552,15 +556,27 @@
                             <p class="cert-provider">Coursera</p>
                         </div>
                         <div class="cert-item">
-                            <p class="cert-name">Mastering Big Data: Spark, Scala, Kafka, Hadoop,Hive & More</p>
+                            <p class="cert-name">Mastering Big Data: Spark, Scala, Kafka, Hadoop, Hive</p>
                             <p class="cert-provider">Udemy</p>
                         </div>
+                        <div class="cert-item">
+                            <p class="cert-name">Azure Data Engineer Masterclass</p>
+                            <p class="cert-provider">Udemy</p>
+                        </div>
+                    </div>
+
+                    <h2>Spoken Languages</h2>
+                    <div class="skills" style="margin-bottom: 30px; margin-top: 15px;">
+                        <div class="skill">Marathi (Native)</div>
+                        <div class="skill">English (Fluent)</div>
+                        <div class="skill">Hindi (Fluent)</div>
                     </div>
 
                     <h2>Extra Curricular</h2>
                     <div class="resume-box">
                         <div class="extra-item">Alumni Representative for 2019 Batch</div>
                         <div class="extra-item">Design Head ACADS [2022-2024]</div>
+                        <div class="extra-item">Film and Media Head E-Cell KITCOEK</div>
                     </div>
 
                     <h2 style="margin-top: 40px;">Hobbies</h2>
@@ -598,12 +614,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
