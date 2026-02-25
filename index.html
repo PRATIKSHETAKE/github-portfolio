@@ -35,13 +35,11 @@
         /* Layout */
         .container {
             display: flex;
-            /* push down to avoid navbar overlap */
         }
 
         /* Profile Container Left */
         .profile-container {
             position: fixed;
-            /* below navbar */
             left: 0;
             width: 33.33%;
             height: 100vh;
@@ -191,21 +189,42 @@
             border-radius: 2px;
         }
 
-        /* Skills */
-        .skills {
+        /* Skills Categorization */
+        .skills-category {
+            margin-bottom: 30px;
+            background: #111;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .skills-category h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
         }
 
         .skill {
-            background: #111;
+            background: #1a1a1a;
             color: var(--secondary);
-            padding: 15px 25px;
-            border-radius: 15px;
-            text-align: center;
-            font-weight: 500;
-            border: 2px solid var(--primary);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+            transition: border-color 0.3s ease;
+        }
+
+        .skill:hover {
+            border-color: var(--primary);
         }
 
         /* Projects Grid */
@@ -233,7 +252,7 @@
         }
 
         .project-card p {
-            flex-grow: 1; /* Pushes the tech tags to the bottom */
+            flex-grow: 1;
             margin-top: 10px;
             margin-bottom: 15px;
         }
@@ -242,16 +261,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: auto; /* Aligns to bottom */
+            margin-top: auto;
         }
 
-        .project-tech .tag {
+        .project-tech .tag, .tag {
             background: #222;
             color: var(--secondary);
             border: 1px solid var(--primary);
-            padding: 4px 10px;
-            margin: 0; /* Adjusted margin */
-            padding: 8px 12px;
+            padding: 6px 12px;
             border-radius: 15px;
             font-size: 0.85em;
         }
@@ -312,8 +329,6 @@
 
         .training-box {
             border-left: 4px solid var(--primary);
-            padding-left: 15px;
-            margin-bottom: 30px;
             padding: 20px;
             border-radius: 12px;
             border: 2px solid var(--primary);
@@ -342,24 +357,6 @@
             font-size: 0.9rem;
         }
 
-        .training-course {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .tag {
-            background: #222;
-            color: var(--secondary);
-            border: 1px solid var(--primary);
-            padding: 4px 4px;
-            margin: 5px;
-            padding: 8px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-        }
-
         footer {
             margin-top: 40px;
             color: var(--secondary);
@@ -369,7 +366,6 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                /* push below navbar */
             }
 
             .profile-container {
@@ -390,7 +386,6 @@
 </head>
 
 <body>
-
 
     <div class="container">
         <div class="profile-container">
@@ -435,37 +430,70 @@
 
             <div class="tab-content">
                 <section id="home" class="active">
-                    <h2>Skills</h2>
-                    <div class="skills">
-                        <div class="skill">Python</div>
-                        <div class="skill">Java</div>
-                        <div class="skill">C</div>
-                        <div class="skill">Flutter</div>
-                        <div class="skill">React Native</div>
-                        <div class="skill">MySQL</div>
-                        <div class="skill">Machine Learning</div>
-                        <div class="skill">Deep Learning</div>
-                        <div class="skill">ETL</div>
-                        <div class="skill">EDA</div>
-                        <div class="skill">PowerBI</div>
-                        <div class="skill">Tableu</div>
-                        <div class="skill">Excel</div>
-                        <div class="skill">Pandas</div>
-                        <div class="skill">Numpy</div>
-                        <div class="skill">Spark</div>
-                        <div class="skill">Hadoop</div>
-                        <div class="skill">Scala</div>
-                        <div class="skill">NiFi</div>
-                        <div class="skill">Cassandra</div>
-                        <div class="skill">Kafka</div>
-                        <div class="skill">Hive</div>
-                        <div class="skill">HBase</div>
-                        <div class="skill">Azure Cloud</div>
-                        <div class="skill">Data Factory</div>
-                        <div class="skill">Synapse Studio</div>
-                        <div class="skill">DataBricks</div>
-                        <div class="skill">Microsoft Fabric</div>
-                        <div class="skill">OOP's</div>
+                    <h2>Technical Skills</h2>
+                    
+                    <!-- Data Engineering & Big Data -->
+                    <div class="skills-category">
+                        <h3><i class="fas fa-database" style="color: var(--primary);"></i> Data Engineering & Big Data</h3>
+                        <div class="skills-list">
+                            <div class="skill">Hadoop</div>
+                            <div class="skill">Apache Spark</div>
+                            <div class="skill">Scala</div>
+                            <div class="skill">PySpark</div>
+                            <div class="skill">Data Lake</div>
+                            <div class="skill">Delta Lake</div>
+                            <div class="skill">Data Warehouse</div>
+                            <div class="skill">Big Data Analytics</div>
+                            <div class="skill">HBase</div>
+                            <div class="skill">Cassandra</div>
+                            <div class="skill">Apache NiFi</div>
+                            <div class="skill">Apache Kafka</div>
+                            <div class="skill">Hive / HiveQL</div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & ETL -->
+                    <div class="skills-category">
+                        <h3><i class="fas fa-cloud" style="color: var(--primary);"></i> Cloud Platforms & Orchestration</h3>
+                        <div class="skills-list">
+                            <div class="skill">Microsoft Azure</div>
+                            <div class="skill">GCP</div>
+                            <div class="skill">Azure Data Factory</div>
+                            <div class="skill">Synapse Analytics</div>
+                            <div class="skill">Azure Databricks</div>
+                            <div class="skill">Stream Analytics</div>
+                        </div>
+                    </div>
+
+                    <!-- AI & Data Science -->
+                    <div class="skills-category">
+                        <h3><i class="fas fa-brain" style="color: var(--primary);"></i> Data Science & AI</h3>
+                        <div class="skills-list">
+                            <div class="skill">Artificial Intelligence</div>
+                            <div class="skill">Machine Learning</div>
+                            <div class="skill">Deep Learning</div>
+                            <div class="skill">Artificial Neural Networks</div>
+                            <div class="skill">CNN / RNN</div>
+                            <div class="skill">Image Processing</div>
+                            <div class="skill">Statistics</div>
+                            <div class="skill">Data Modelling</div>
+                            <div class="skill">Pandas</div>
+                            <div class="skill">NumPy</div>
+                        </div>
+                    </div>
+
+                    <!-- BI & Analytics -->
+                    <div class="skills-category">
+                        <h3><i class="fas fa-chart-line" style="color: var(--primary);"></i> BI & Analytics</h3>
+                        <div class="skills-list">
+                            <div class="skill">Tableau</div>
+                            <div class="skill">Power BI</div>
+                            <div class="skill">M Language</div>
+                            <div class="skill">MySQL</div>
+                            <div class="skill">SQL Server</div>
+                            <div class="skill">Data Visualization</div>
+                            <div class="skill">Data Analysis</div>
+                        </div>
                     </div>
 
                     <h2 style="margin-top: 40px;">Professional Training</h2>
@@ -477,7 +505,7 @@
                             <p style="color: #ddd; line-height: 1.4;">
                                 <strong>Key Projects:</strong> Credit Card Classification, Tsunami Risk Assessment, Coffee Shop Sales Analysis.
                             </p>
-                            <div class="training-course">
+                            <div class="project-tech" style="margin-top: 15px;">
                                 <span class="tag">Advanced Excel</span>
                                 <span class="tag">Power BI</span>
                                 <span class="tag">Tableau</span>
@@ -509,7 +537,7 @@
                             <h3>Global Earthquakes & Tsunami Analysis</h3>
                             <a href="https://github.com/PRATIKSHETAKE/Global-Earthquakes-and-Tsunami-analysis"
                                 style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Analyzed global earthquake data to identify seismic patterns, magnitudes, and their relation to tsunami occurrences using Geospatial visualizations.</p>
+                            <p>Analyzed global earthquake data to identify seismic patterns and magnitudes using Geospatial visualizations.</p>
                             <div class="project-tech">
                                 <span class="tag">Python</span>
                                 <span class="tag">Plotly</span>
@@ -522,62 +550,12 @@
                             <h3>Self Driving Car Perception</h3>
                             <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection"
                                 style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-
-                            <p>Simulated a self-driving car environment using U-Net for road segmentation and YOLOv3 for real-time object detection.</p>
+                            <p>Simulated a self-driving car environment using U-Net for road segmentation and YOLOv3 for detection.</p>
                             <div class="project-tech">
                                 <span class="tag">YOLOv3</span>
                                 <span class="tag">U-Net</span>
                                 <span class="tag">TensorFlow</span>
                                 <span class="tag">CV</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <h3>Image Captioning Model</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Image-Captioning"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Developed an image captioning system using CNN + LSTM architecture trained on the COCO dataset to describe images in natural language.</p>
-                            <div class="project-tech">
-                                <span class="tag">Deep Learning</span>
-                                <span class="tag">CNN-RNN</span>
-                                <span class="tag">COCO</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <h3>Power BI Report for Car Sales</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Power_BI_report_for_car_sales"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>An interactive Power BI dashboard analyzing car sales data, tracking trends in models, revenue, and customer preferences.</p>
-                            <div class="project-tech">
-                                <span class="tag">Power BI</span>
-                                <span class="tag">DAX</span>
-                                <span class="tag">Data Viz</span>
-                                <span class="tag">Analytics</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <h3>Power BI Report for Supermarket Sales</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Power_BI_Report_for_Supermarket_Sales"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Comprehensive dashboard visualizing supermarket performance, sales trends, and product category analysis.</p>
-                            <div class="project-tech">
-                                <span class="tag">Power BI</span>
-                                <span class="tag">Dashboard</span>
-                                <span class="tag">Retail Analytics</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <h3>Power BI Report for Amazon Prime Sales</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Power_BI_Report_for_Amazon_Prime_Sales"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Visual analysis of Amazon Prime sales data to identify subscriber growth, content popularity, and regional trends.</p>
-                            <div class="project-tech">
-                                <span class="tag">Power BI</span>
-                                <span class="tag">Business Intelligence</span>
-                                <span class="tag">Forecasting</span>
                             </div>
                         </div>
 
@@ -627,7 +605,7 @@
                     </div>
 
                     <h2>Spoken Languages</h2>
-                    <div class="skills" style="margin-bottom: 30px; margin-top: 15px;">
+                    <div class="skills-list" style="margin-bottom: 30px; margin-top: 15px;">
                         <div class="skill">Marathi (Native)</div>
                         <div class="skill">English (Fluent)</div>
                         <div class="skill">Hindi (Fluent)</div>
@@ -641,7 +619,7 @@
                     </div>
 
                     <h2 style="margin-top: 40px;">Hobbies</h2>
-                    <div class="skills">
+                    <div class="skills-list">
                         <div class="skill">Travelling</div>
                         <div class="skill">Bike Ride</div>
                         <div class="skill">Football</div>
@@ -675,5 +653,3 @@
 </body>
 
 </html>
-
-
