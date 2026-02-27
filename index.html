@@ -46,6 +46,7 @@
             background-color: #0a0a0a;
             color: #fff;
             padding: 40px 30px;
+            margin-left: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -133,6 +134,14 @@
             max-width: 900px;
             margin-bottom: 30px;
             background: #111;
+
+            position: sticky;
+            top: 30px;
+            z-index: 1000;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(8px);
+
+            
         }
 
         .tabs-container button {
@@ -264,7 +273,8 @@
             margin-top: auto;
         }
 
-        .project-tech .tag, .tag {
+        .project-tech .tag,
+        .tag {
             background: #222;
             color: var(--secondary);
             border: 1px solid var(--primary);
@@ -392,7 +402,7 @@
             <div class="profile">
                 <img src="profile.jpeg" alt="Pratik Shetake">
                 <h2>Pratik Shetake</h2>
-                <p style="margin-bottom: 50px;">Data Analyst | ML & AI Enthusiast | Big Data Analyst</p>
+                <p style="margin-bottom: 50px;">Data Science & Data Engineer Aspirant</p>
                 <div class="info">
                     <p><i class="fas fa-map-marker-alt" style="padding-left: 3px;"></i>Kolhapur, Maharashtra, India</p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:work.pratikshetake@gmail.com"
@@ -431,10 +441,11 @@
             <div class="tab-content">
                 <section id="home" class="active">
                     <h2>Technical Skills</h2>
-                    
+
                     <!-- Data Engineering & Big Data -->
                     <div class="skills-category">
-                        <h3><i class="fas fa-database" style="color: var(--primary);"></i> Data Engineering & Big Data</h3>
+                        <h3><i class="fas fa-database" style="color: var(--primary);"></i> Data Engineering & Big Data
+                        </h3>
                         <div class="skills-list">
                             <div class="skill">Hadoop</div>
                             <div class="skill">Apache Spark</div>
@@ -454,7 +465,8 @@
 
                     <!-- Cloud & ETL -->
                     <div class="skills-category">
-                        <h3><i class="fas fa-cloud" style="color: var(--primary);"></i> Cloud Platforms & Orchestration</h3>
+                        <h3><i class="fas fa-cloud" style="color: var(--primary);"></i> Cloud Platforms & Orchestration
+                        </h3>
                         <div class="skills-list">
                             <div class="skill">Microsoft Azure</div>
                             <div class="skill">GCP</div>
@@ -503,7 +515,8 @@
                             <p class="training-role">Trainee, Data Analytics and Science Engineer</p>
                             <p class="training-date">June 2025 - Jan 2026</p>
                             <p style="color: #ddd; line-height: 1.4;">
-                                <strong>Key Projects:</strong> Credit Card Classification, Tsunami Risk Assessment, Coffee Shop Sales Analysis.
+                                <strong>Key Projects:</strong> Credit Card Classification, Tsunami Risk Assessment,
+                                Coffee Shop Sales Analysis.
                             </p>
                             <div class="project-tech" style="margin-top: 15px;">
                                 <span class="tag">Advanced Excel</span>
@@ -519,25 +532,30 @@
 
                     <h2 style="margin-top: 40px;">Projects</h2>
                     <div class="projects-grid">
-                        
+
                         <div class="project-card">
-                            <h3>Credit Card Classification</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Credit-Card-Classification-using-DL/tree/main"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Built a deep learning classification model to predict credit card customer behavior using historical financial data.</p>
+                            <h3>Self-Driving Car Environment Perception</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Self-Driving-Car-Enviournment-Perception"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Developed an environment perception system for autonomous vehicles using computer vision
+                                techniques to detect and interpret objects and road features in real-time driving
+                                scenarios.</p>
                             <div class="project-tech">
                                 <span class="tag">Python</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">TensorFlow</span>
-                                <span class="tag">Seaborn</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Deep Learning</span>
                             </div>
                         </div>
 
                         <div class="project-card">
                             <h3>Global Earthquakes & Tsunami Analysis</h3>
                             <a href="https://github.com/PRATIKSHETAKE/Global-Earthquakes-and-Tsunami-analysis"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Analyzed global earthquake data to identify seismic patterns and magnitudes using Geospatial visualizations.</p>
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Analyzed global earthquake data to identify seismic patterns and magnitudes using
+                                Geospatial visualizations.</p>
                             <div class="project-tech">
                                 <span class="tag">Python</span>
                                 <span class="tag">Plotly</span>
@@ -547,15 +565,67 @@
                         </div>
 
                         <div class="project-card">
-                            <h3>Self Driving Car Perception</h3>
-                            <a href="https://github.com/PRATIKSHETAKE/Road-Segmentation-and-Object-Detection"
-                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to Repo</a>
-                            <p>Simulated a self-driving car environment using U-Net for road segmentation and YOLOv3 for detection.</p>
+                            <h3>Image Captioning using Deep Learning</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Image-Captioning-Project"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Built a deep learning-based image captioning system that generates descriptive natural
+                                language captions for input images using convolutional and recurrent neural networks.
+                            </p>
                             <div class="project-tech">
-                                <span class="tag">YOLOv3</span>
-                                <span class="tag">U-Net</span>
+                                <span class="tag">Python</span>
                                 <span class="tag">TensorFlow</span>
-                                <span class="tag">CV</span>
+                                <span class="tag">Keras</span>
+                                <span class="tag">Computer Vision</span>
+                            </div>
+                        </div>
+
+
+                        <div class="project-card">
+                            <h3>Unstructured Image ETL pipeline</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Unstructured-image-etl"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Created an ETL (Extract, Transform, Load) pipeline to process unstructured image
+                                data—automating extraction of metadata and preparing images for downstream analysis and
+                                machine learning workflows.</p>
+                            <div class="project-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">ETL</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Real-Time Global Wikipedia Edit Tracker</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/Real-Time-Global-Wikipedia-Edit-Tracker"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Built a real-time monitoring application that tracks edits on Wikipedia globally,
+                                visualizing live edit activity and enabling insights into collaborative content changes
+                                across the world.</p>
+                            <div class="project-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">WebSockets</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>AI-Based Resume Screening System</h3>
+                            <a href="https://github.com/PRATIKSHETAKE/AI-Based-Resume-Screening-System"
+                                style="color: var(--primary); text-decoration: underline; margin-bottom: 5px;">Link to
+                                Repo</a>
+                            <p>Developed an AI-driven resume screening system that automatically analyzes and ranks
+                                resumes based on skills and job requirements, streamlining candidate shortlisting for
+                                recruiters.</p>
+                            <div class="project-tech">
+                                <span class="tag">Python</span>
+                                <span class="tag">Natural Language Processing</span>
+                                <span class="tag">scikit-learn</span>
+                                <span class="tag">Flask</span>
                             </div>
                         </div>
 
@@ -616,6 +686,8 @@
                         <div class="extra-item">Alumni Representative for 2019 Batch</div>
                         <div class="extra-item">Design Head ACADS [2022-2024]</div>
                         <div class="extra-item">Film and Media Head E-Cell KITCOEK</div>
+
+                        <div class="extra-item">Inter-School Football Tournaments</div>
                     </div>
 
                     <h2 style="margin-top: 40px;">Hobbies</h2>
